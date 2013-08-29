@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/product.reel",
+            "properties": {
+                "element": {"#": "product"}
+            }
+        },
+        "listItem": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem"}
+            }
+        },
+        "count": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "count"},
+                "value": 1,
+                "min": 0,
+                "max": 10
+            },
+            "bindings": {
+                "value": {"<->": "@owner.product.count"}
+            }
+        },
+        "name": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "name"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.name"}
+            }
+        },
+        "price": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "price"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.price"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="product" class="Product">
+        <li data-montage-id="listItem">
+            <span data-montage-id="name"></span>
+            <input type="number" data-montage-id="count">
+            <span data-montage-id="price"></span>
+        </li>
+    </div>
+</body>
+</html>

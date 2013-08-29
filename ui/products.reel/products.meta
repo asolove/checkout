@@ -15,16 +15,16 @@
     "properties": {
       "name": null,
       "blueprintModule": {
-        "%": "ui/main.reel/main.meta"
+        "%": "ui/products.reel/products.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprintGroups": {
-        "Main": []
+        "Products": []
       },
       "module": {
-        "%": "ui/main.reel"
+        "%": "ui/products.reel"
       },
-      "exportName": "Main"
+      "exportName": "Products"
     }
   }
 }

@@ -11,11 +11,16 @@
                 "element": {"#": "shippingOption"}
             }
         },
+        "listItem": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem"}
+            }
+        },
         "name": {
             "prototype": "digit/ui/text.reel",
             "properties": {
-                "element": {"#": "object"},
-                "value": "Name"
+                "element": {"#": "name"}
             },
             "bindings": {
                 "value": {"<-": "@owner.shippingOption.label"}
@@ -24,19 +29,16 @@
         "price": {
             "prototype": "digit/ui/text.reel",
             "properties": {
-                "element": {"#": "text"},
-                "converter": null,
-                "value": "Price"
+                "element": {"#": "price"}
             },
             "bindings": {
                 "value": {"<-": "@owner.shippingOption.price"}
             }
         },
-        "radioButton1": {
+        "selected": {
             "prototype": "digit/ui/radio-button.reel",
             "properties": {
-                "element": {"#": "radio"},
-                "checked": false
+                "element": {"#": "selected"}
             },
             "bindings": {
                 "radioButtonController": {"<-": "@owner.radioButtonController"}
@@ -45,8 +47,7 @@
         "time": {
             "prototype": "digit/ui/text.reel",
             "properties": {
-                "element": {"#": "object2"},
-                "value": "Text"
+                "element": {"#": "time"}
             },
             "bindings": {
                 "value": {"<-": "@owner.shippingOption.time"}
@@ -57,10 +58,12 @@
 </head>
 <body>
     <div data-montage-id="shippingOption" class="ShippingOption">
-        <input type="radio" data-montage-id="radio">
-        <span data-montage-id="object2"></span>
-        <span data-montage-id="object"></span>
-        <span data-montage-id="text"></span>
+        <li data-montage-id="listItem">
+            <input type="radio" data-montage-id="selected">
+            <span data-montage-id="name"></span>
+            <span data-montage-id="time"></span>
+            <span data-montage-id="price"></span>
+        </li>
     </div>
 </body>
 </html>

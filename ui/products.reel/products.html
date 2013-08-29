@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="products.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/products.reel",
+            "properties": {
+                "element": {"#": "products"}
+            }
+        },
+        "list1": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "contentController": {"@": "rangeController1"}
+            }
+        },
+        "product1": {
+            "prototype": "ui/product.reel",
+            "properties": {
+                "element": {"#": "product"}
+            },
+            "bindings": {
+                "product": {"<-": "@list1.objectAtCurrentIteration"}
+            }
+        },
+        "rangeController1": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    { "count": 1, "name": "Samsung Montage Prepaid Phone", "price": 35.20 },
+                    { "count": 2, "name": "Legend of Zelda Montage", "price": 0.99 },
+                    { "count": 1, "name": "Bamboo Montage-83 Knee High Boot", "price": 38.90 }
+                ]
+            }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Products"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="products" class="Products">
+        <h1 data-montage-id="title"></h1>
+        <ul data-montage-id="list">
+            <div data-montage-id="product"></div>
+        </ul>
+    </div>
+</body>
+</html>
