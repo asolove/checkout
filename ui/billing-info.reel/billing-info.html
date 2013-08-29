@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="billing-info.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/billing-info.reel",
+            "properties": {
+                "element": {"#": "billingInfo"}
+            }
+        },
+        "rangeController1": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": []
+            }
+        },
+        "select1": {
+            "prototype": "digit/ui/select.reel",
+            "properties": {
+                "element": {"#": "select"},
+                "content": null,
+                "contentController": {"@": "rangeController1"},
+                "labelPropertyName": "label"
+            }
+        },
+        "text1": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Name"
+            }
+        },
+        "text3": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object"},
+                "value": "Text"
+            }
+        },
+        "text4": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object2"},
+                "value": "Address"
+            }
+        },
+        "text5": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object5"},
+                "value": "City"
+            }
+        },
+        "text6": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object7"},
+                "value": "State"
+            }
+        },
+        "textField2": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "placeholder": "Text"
+            }
+        },
+        "textField5": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "object3"},
+                "placeholder": "Text"
+            }
+        },
+        "textField6": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "object4"},
+                "placeholder": "Text"
+            }
+        },
+        "textField7": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "object6"},
+                "placeholder": "Text"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="billingInfo" class="BillingInfo">
+        <span data-montage-id="text"></span>
+        <input data-montage-id="textField" type="text">
+        <span data-montage-id="object2"></span>
+        <input data-montage-id="object3" type="text">
+        <input data-montage-id="object4" type="text">
+        <span data-montage-id="object5"></span>
+        <input data-montage-id="object6" type="text">
+        <span data-montage-id="object7"></span>
+        <select data-montage-id="select">
+            <option value="">
+                Select
+            </option>
+        </select>
+        <span data-montage-id="object"></span>
+    </div>
+</body>
+</html>
