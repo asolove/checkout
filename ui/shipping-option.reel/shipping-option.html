@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="shipping-option.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/shipping-option.reel",
+            "properties": {
+                "element": {"#": "shippingOption"}
+            }
+        },
+        "name": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object"},
+                "value": "Name"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.shippingOption.label"}
+            }
+        },
+        "price": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "converter": null,
+                "value": "Price"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.shippingOption.price"}
+            }
+        },
+        "radioButton1": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "radio"},
+                "checked": false
+            },
+            "bindings": {
+                "radioButtonController": {"<-": "@owner.radioButtonController"}
+            }
+        },
+        "time": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object2"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.shippingOption.time"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="shippingOption" class="ShippingOption">
+        <input type="radio" data-montage-id="radio">
+        <span data-montage-id="object2"></span>
+        <span data-montage-id="object"></span>
+        <span data-montage-id="text"></span>
+    </div>
+</body>
+</html>

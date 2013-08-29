@@ -6,15 +6,69 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/shipping-options.reel",
             "properties": {
                 "element": {"#": "shippingOptions"}
             }
+        },
+        "list1": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "contentController": {"@": "rangeController1"}
+            }
+        },
+        "rangeController1": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    {
+                        "label": "Media mail",
+                        "time": "2-3 weeks",
+                        "price": 3.56
+                    },
+                    {
+                        "label": "USPS",
+                        "time": "4-8 days",
+                        "price": 8.25
+                    },
+                    {
+                        "label": "FedEx",
+                        "time": "2 days",
+                        "price": 14.67
+                    }
+                ]
+            }
+        },
+        "shippingOption1": {
+            "prototype": "ui/shipping-option.reel",
+            "properties": {
+                "element": {"#": "shippingOption"}
+            },
+            "bindings": {
+                "shippingOption": {"<-": "@list1.objectAtCurrentIteration"},
+                "radioButtonController": {"<-": "@radioButtonController"}
+            }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Shipping options"
+            }
+        },
+        "radioButtonController": {
+            "prototype": "montage/core/radio-button-controller"
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="shippingOptions" class="ShippingOptions">
+        <h1 data-montage-id="title"></h1>
+        <ul data-montage-id="list">
+            <div data-montage-id="shippingOption"></div>
+        </ul>
     </div>
 </body>
 </html>

@@ -14,7 +14,10 @@
         "rangeController1": {
             "prototype": "montage/core/range-controller",
             "properties": {
-                "content": []
+                "content": [
+                    { "label": "CA" },
+                    { "label": "CO" }
+                ]
             }
         },
         "select1": {
@@ -88,12 +91,20 @@
                 "element": {"#": "object6"},
                 "placeholder": "Text"
             }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Billing information"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="billingInfo" class="BillingInfo">
+        <h1 data-montage-id="title"></h1>
         <span data-montage-id="text"></span>
         <input data-montage-id="textField" type="text">
         <span data-montage-id="object2"></span>

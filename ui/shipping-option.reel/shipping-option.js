@@ -1,16 +1,16 @@
 /**
- * @module ./billing-info.reel
+ * @module ./shipping-option.reel
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
 
 /**
- * @class BillingInfo
+ * @class ShippingOption
  * @extends Component
  */
-exports.BillingInfo = Component.specialize(/** @lends BillingInfo# */ {
+exports.ShippingOption = Component.specialize(/** @lends ShippingOption# */ {
     constructor: {
-        value: function BillingInfo() {
+        value: function ShippingOption() {
             this.super();
         }
     }
