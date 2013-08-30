@@ -18,9 +18,10 @@
             }
         },
         "name": {
-            "prototype": "digit/ui/text.reel",
+            "prototype": "montage/ui/label.reel",
             "properties": {
-                "element": {"#": "name"}
+                "element": {"#": "name"},
+                "target": {"@": "selected"}
             },
             "bindings": {
                 "value": {"<-": "@owner.shippingOption.label"}
@@ -41,7 +42,8 @@
                 "element": {"#": "selected"}
             },
             "bindings": {
-                "radioButtonController": {"<-": "@owner.radioButtonController"}
+                "radioButtonController": {"<-": "@owner.radioButtonController"},
+                "checked": {"<->": "@owner.shippingOption.selected"}
             }
         },
         "time": {

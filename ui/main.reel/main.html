@@ -26,10 +26,33 @@
                 "element": {"#": "products"}
             }
         },
+        "shippingInfo1": {
+            "prototype": "ui/shipping-info.reel",
+            "properties": {
+                "element": {"#": "shippingInfo"}
+            }
+        },
         "shippingOptions1": {
             "prototype": "ui/shipping-options.reel",
             "properties": {
                 "element": {"#": "shippingOptions"}
+            }
+        },
+        "total": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "total"},
+                "value": "$23.00"
+            },
+            "bindings": {
+                "value": {"<-": "@shippingOptions1.total + @products1.total"}
+            }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Order total"
             }
         }
     }
@@ -39,7 +62,10 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <div data-montage-id="products"></div>
         <div data-montage-id="shippingOptions"></div>
+        <h1 data-montage-id="title"></h1>
+        <span data-montage-id="total"></span>
         <div data-montage-id="billingInfo"></div>
+        <div data-montage-id="shippingInfo"></div>
     </div>
 </body>
 </html>

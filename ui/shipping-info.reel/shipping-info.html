@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="shipping-info.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/shipping-info.reel",
+            "properties": {
+                "element": {"#": "shippingInfo"}
+            }
+        },
+        "condition": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "condition"},
+                "removalStrategy": "hide"
+            }
+        },
+        "same-as-billing": {
+            "prototype": "digit/ui/toggle-switch.reel",
+            "properties": {
+                "element": {"#": "same-as-billing"}
+            }
+        },
+        "text1": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Same as billing?"
+            }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Shipping information"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="shippingInfo" class="ShippingInfo">
+        <h1 data-montage-id="title"></h1>
+        <div data-montage-id="condition"></div>
+        <span data-montage-id="text"></span>
+        <div data-montage-id="same-as-billing"></div>
+    </div>
+</body>
+</html>

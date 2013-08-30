@@ -9,6 +9,9 @@
             "prototype": "ui/shipping-options.reel",
             "properties": {
                 "element": {"#": "shippingOptions"}
+            },
+            "bindings": {
+                "total": {"<-": "@rangeController1.organizedContent.filter{selected}.0.price + 2"}
             }
         },
         "list1": {
@@ -25,17 +28,20 @@
                     {
                         "label": "Media mail",
                         "time": "2-3 weeks",
-                        "price": 3.56
+                        "price": 3.56,
+                        "selected": true
                     },
                     {
                         "label": "USPS",
                         "time": "4-8 days",
-                        "price": 8.25
+                        "price": 8.25,
+                        "selected": false
                     },
                     {
                         "label": "FedEx",
                         "time": "2 days",
-                        "price": 14.67
+                        "price": 14.67,
+                        "selected": false
                     }
                 ]
             }

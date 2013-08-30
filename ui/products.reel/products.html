@@ -9,6 +9,9 @@
             "prototype": "ui/products.reel",
             "properties": {
                 "element": {"#": "products"}
+            },
+            "bindings": {
+                "total": {"<-": "@rangeController1.organizedContent.sum{total}"}
             }
         },
         "list1": {
@@ -24,7 +27,8 @@
                 "element": {"#": "product"}
             },
             "bindings": {
-                "product": {"<-": "@list1.objectAtCurrentIteration"}
+                "product": {"<-": "@list1.objectAtCurrentIteration"},
+                "product.total": {"<-": "product.price * product.count"}
             }
         },
         "rangeController1": {
