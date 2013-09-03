@@ -42,7 +42,7 @@
             "prototype": "digit/ui/text.reel",
             "properties": {
                 "element": {"#": "total"},
-                "value": "$23.00"
+                "converter": { "@": "currencyConverter" }
             },
             "bindings": {
                 "value": {"<-": "@shippingOptions1.total + @products1.total"}
@@ -53,6 +53,12 @@
             "properties": {
                 "element": {"#": "title"},
                 "value": "Order total"
+            }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "showCurrencyBeforeNumber": true
             }
         }
     }
