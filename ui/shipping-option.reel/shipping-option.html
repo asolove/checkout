@@ -33,7 +33,8 @@
                 "element": {"#": "price"}
             },
             "bindings": {
-                "value": {"<-": "@owner.shippingOption.price"}
+                "value": {"<-": "@owner.shippingOption.price"},
+                "converter": {"<-": "@owner.currencyConverter"}
             }
         },
         "selected": {

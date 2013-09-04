@@ -8,7 +8,8 @@
         "owner": {
             "prototype": "ui/products.reel",
             "properties": {
-                "element": {"#": "products"}
+                "element": {"#": "products"},
+                "currencyConverter": {"@": "currencyConverter"}
             },
             "bindings": {
                 "total": {"<-": "@rangeController1.organizedContent.sum{total}"}
@@ -28,7 +29,8 @@
             },
             "bindings": {
                 "product": {"<-": "@list1.objectAtCurrentIteration"},
-                "product.total": {"<-": "product.price * product.count"}
+                "product.total": {"<-": "product.price * product.count"},
+                "currencyConverter": {"<-": "@owner.currencyConverter"}
             }
         },
         "rangeController1": {
@@ -46,6 +48,12 @@
             "properties": {
                 "element": {"#": "title"},
                 "value": "Products"
+            }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "showCurrencyBeforeNumber": true
             }
         }
     }

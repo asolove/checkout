@@ -12,7 +12,11 @@ exports.ShippingOptions = Component.specialize(/** @lends ShippingOptions# */ {
     constructor: {
         value: function ShippingOptions() {
             this.super();
-            window.shippingOptions = this;
+            window.shoppingOptions = this;
         }
+    },
+
+    list: {
+        value: null
     }
 });
