@@ -9,6 +9,9 @@
             "prototype": "ui/product.reel",
             "properties": {
                 "element": {"#": "product"}
+            },
+            "bindings": {
+                "@owner.classList.has('expanded')": { "<-": "@owner.expanded"}
             }
         },
         "listItem": {
@@ -55,9 +58,9 @@
 <body>
     <div data-montage-id="product" class="Product">
         <li data-montage-id="listItem">
-            <span data-montage-id="name"></span>
-            <input type="number" data-montage-id="count">
-            <span data-montage-id="price"></span>
+            <span class="price" data-montage-id="price"></span>
+            <span class="name" data-montage-id="name"></span>
+            <input class="count" type="number" data-montage-id="count">
         </li>
     </div>
 </body>

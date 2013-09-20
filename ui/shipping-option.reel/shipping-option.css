@@ -1,3 +1,15 @@
 .ShippingOption {
 
 }
+
+.ShippingOption .price {
+    float: right;
+}
+
+.ShippingOption .name {
+    color: hsl(0,0%,40%);
+}
+
+.ShippingOption .time {
+    color: hsl(0,0%,60%) !important;
+}

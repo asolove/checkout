@@ -1,1 +1,35 @@
-.Main {}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Main {
+    padding: 40px 20px 20px;
+    line-height: 1.5;
+}
+
+.Main .digit-Title { 
+    font-size: 16px;
+    color: #47b;
+    margin: 20px 0 10px 0;
+}
+
+.Main .digit-List {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 5px -10px;
+}
+
+.Main .digit-ListItem {
+    background-image: none;
+    background-color: #f9f9f9;
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 5px 10px;
+}
+
+.Main .digit-ListItem .digit-Text {
+    padding: 0px;
+    display: inline-block;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/header.reel",
+            "properties": {
+                "element": {"#": "header"}
+            }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "showCurrencyBeforeNumber": true
+            }
+        },
+        "name": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Amazon"
+            }
+        },
+        "total": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "object"},
+                "converter": {"@": "currencyConverter"},
+                "value": null
+            },
+            "bindings": {
+                "value": {"<-": "@owner.total"}
+            }
+        },
+        "totalLabel": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Total: "
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="header" class="Header">
+        <div class="Header-right">
+            <span data-montage-id="text"></span>
+            <span data-montage-id="object"></span>
+        </div>
+        <h1 data-montage-id="title"></h1>
+    </div>
+</body>
+</html>

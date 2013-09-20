@@ -1,3 +1,20 @@
 .Product {
 
 }
+
+.Main .Product .name {
+    margin-right: 100px;
+    display: block !important;
+}
+
+.Product .price { 
+    float: right;
+}
+
+.Product .count {
+    display: none;
+}
+
+.Main .Product.expanded .count {
+    display: block;
+}
